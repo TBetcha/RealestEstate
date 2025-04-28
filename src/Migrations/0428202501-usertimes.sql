@@ -1,0 +1,6 @@
+
+ALTER TABLE users
+ ADD COLUMN created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+ ADD COLUMN updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+ ALTER COLUMN user_id SET DEFAULT uuid_generate_v4();
+;
